@@ -8,13 +8,14 @@
 # except that the suffix should be replaced with the .s suffix. For example,
 # executing
 #
-# $ ./pyyc tests/test1.py
+# $ ./pyyc mytests/test1.py
 #
 # should create an x86 assembly file tests/test1.s.
 
 # THIS_DIR is bound to the directory that this script file is in.
-THIS_DIR=$(dirname $(realpath $0))
+# Use as needed.
+THIS_DIR=$(cd $(dirname $0) && pwd)
 
-# Example: A python script called compile.py in this directory is passed
+# Example: A python script called src/pyyc/compile.py is passed
 # the arguments that are passed to this script.
-python ${THIS_DIR}/compile.py $*
+python ${THIS_DIR}/src/pyyc/compile.py $*
