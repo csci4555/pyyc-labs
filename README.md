@@ -16,7 +16,7 @@ $ pytest --pyyctests mytests
 
 where `mytests` is the directory with your compiler tests. Make sure you have [pytest] installed. You might want to consider using [pipenv] to manage your dependencies and Python environment.
 
-Then, to run a program compiled from your compiler. You need to do something like following, which is the sequence that the autotester follows:
+Then, to run a program compiled from your compiler. You need to do something like the following, which is the sequence that the autotester follows:
 
 - Build the run-time system (if it is not already built).
 ```bash
