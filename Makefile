@@ -13,8 +13,6 @@
 # $ make clean
 #
 
-include Test.mk
-
 # THIS_DIR is bound to the directory that this script file is in.
 # Use as needed.
 THIS_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
@@ -26,3 +24,5 @@ all: runtime
 # Edit as needed to clean your build
 .PHONY: clean
 clean: runtime-clean
+
+include Test.mk
