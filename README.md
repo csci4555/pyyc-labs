@@ -35,7 +35,7 @@ $ ./pyyc mytests/test1.py
 
 - Link your assembly with the run-time system.
 ```bash
-$ gcc -m32 -g -lm mytests/test1.s runtime/libpyyruntime.a -o mytests/test1
+$ gcc -m32 -g mytests/test1.s runtime/libpyyruntime.a -lm -o mytests/test1
 ```
 
 - Run your program.
